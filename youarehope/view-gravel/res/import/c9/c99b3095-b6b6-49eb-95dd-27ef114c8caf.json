@@ -1,0 +1,27 @@
+{
+	"__type__": "cc.SpriteFrame",
+	"content": {
+		"name": "ui-erase-on",
+		"texture": "a8gDWTealELrvs+LXDFboV",
+		"rect": [
+			40,
+			49,
+			121,
+			108
+		],
+		"offset": [
+			0.5,
+			-3
+		],
+		"originalSize": [
+			200,
+			200
+		],
+		"capInsets": [
+			0,
+			0,
+			0,
+			0
+		]
+	}
+}

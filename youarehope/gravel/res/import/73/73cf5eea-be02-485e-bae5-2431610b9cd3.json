@@ -1,0 +1,27 @@
+{
+	"__type__": "cc.SpriteFrame",
+	"content": {
+		"name": "earth_7",
+		"texture": "eeXBkPYeFJVqngCrw4PHI4",
+		"rect": [
+			0,
+			0,
+			1568,
+			1699
+		],
+		"offset": [
+			0,
+			0
+		],
+		"originalSize": [
+			1568,
+			1699
+		],
+		"capInsets": [
+			0,
+			0,
+			0,
+			0
+		]
+	}
+}

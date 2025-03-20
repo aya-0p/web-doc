@@ -1,0 +1,27 @@
+{
+	"__type__": "cc.SpriteFrame",
+	"content": {
+		"name": "earth_6",
+		"texture": "6bY4hNMbpLDpRBjkCk3kKp",
+		"rect": [
+			0,
+			0,
+			1618,
+			1556
+		],
+		"offset": [
+			0,
+			0
+		],
+		"originalSize": [
+			1618,
+			1556
+		],
+		"capInsets": [
+			0,
+			0,
+			0,
+			0
+		]
+	}
+}
