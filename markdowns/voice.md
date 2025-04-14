@@ -5,7 +5,7 @@
 
 # 文山 彩
 
-<img src="https://f.4587-aya-0p.work/share/avatar_1000.png" height="180">
+<img src="https://f.ay0.org/share/avatar_1000.png" height="180">
 
 - 読み方: ふみやま あや
 - 年齢: 20
@@ -17,13 +17,13 @@
 
 ### ノーマル v1
 
-- [こんにちは、私の名前は文山彩です！](https://f.4587-aya-0p.work/share/314556434_001.wav)
-- [皆さん、今日も一日お疲れ様です。](https://f.4587-aya-0p.work/share/314556434_002.wav)
-- [私だって好きでやってるわけじゃないんだからねっ！](https://f.4587-aya-0p.work/share/314556434_003.wav)
+- [こんにちは、私の名前は文山彩です！](https://f.ay0.org/share/314556434_001.wav)
+- [皆さん、今日も一日お疲れ様です。](https://f.ay0.org/share/314556434_002.wav)
+- [私だって好きでやってるわけじゃないんだからねっ！](https://f.ay0.org/share/314556434_003.wav)
 
 ## ダウンロード
 
-- [ここからダウンロード](https://f.4587-aya-0p.work/share/voicemodel_v1.0.zip)
+- [ここからダウンロード](https://f.ay0.org/share/voicemodel_v1.0.zip)
 
 ## 音声モデルの利用規約
 
@@ -69,8 +69,8 @@
 
 - 自作です。自由に使ってください。
 - 上の画像は1000x1000です。
-- [最高画質のものはここにあります。3000x3000のためファイルサイズに注意](https://f.4587-aya-0p.work/share/avatar.png)
-- [GIMP用の画像ファイルはここにあります。ファイルサイズに注意](https://f.4587-aya-0p.work/share/avatar.xcf)
+- [最高画質のものはここにあります。3000x3000のためファイルサイズに注意](https://f.ay0.org/share/avatar.png)
+- [GIMP用の画像ファイルはここにあります。ファイルサイズに注意](https://f.ay0.org/share/avatar.xcf)
 
 ### 要約
 
@@ -136,7 +136,7 @@
 - 「emotion 70」, 「emotion 72」はファイルを分割しています
 - 収録時の年齢: 19歳
 - 音声モデル「COEIROINK:文山 彩, ノーマルv1」作成に利用しています
-- ファイルURL: <https://f.4587-aya-0p.work/share/itacopus_read_1.zip>
+- ファイルURL: <https://f.ay0.org/share/itacopus_read_1.zip>
 
 ## コーパス読み上げ音声の利用規約
 

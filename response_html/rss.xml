@@ -2,11 +2,11 @@
 <rss version="2.0">
   <channel>
     <title>Server Status</title>
-    <link>https://4587-aya-0p.work</link>
+    <link>https://ay0.org</link>
     <description>Server Status</description>
     <item>
       <title>　　　　　　　　　　　　　　　取得：{date_now}　{special}..............................................................................................................................................................................　　　　　Controller：{controller}　　　　　☆　　　　　Discord-Logger：{logger}　　　　　☆　　　　　Discord-Main：{main}　　　　　☆　　　　　Web：{web}　　　　　☆　　　　　Misskey-Server：{miserver}　　　　　☆　　　　　Misskey-Discord：{midiscord}　　　　　☆　　　　　{info}　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　</title>
-      <link>https://4587-aya-0p.work</link>
+      <link>https://ay0.org</link>
       <description>　　　　　　　　　　　　　　　取得：{date_now}　{special}..............................................................................................................................................................................　　　　　Controller：{controller}　　　　　☆　　　　　Discord-Logger：{logger}　　　　　☆　　　　　Discord-Main：{main}　　　　　☆　　　　　Web：{web}　　　　　☆　　　　　Misskey-Server：{miserver}　　　　　☆　　　　　Misskey-Discord：{midiscord}　　　　　☆　　　　　{info}　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　</description>
       <pubDate>{date_fix}</pubDate>
     </item>

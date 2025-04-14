@@ -56,7 +56,7 @@
     <h3>ログインしたデータの使いみち</h3>
     <ul>
       <li>利用者の<a href="https://misskey-hub.net/ja/docs/for-users/resources/glossary/#acct">Acct</a>を取得</li>
-      <li>@hidden@mi.4587-aya-0p.workをフォローしているかを確認</li>
+      <li>@hidden@mi.ay0.orgをフォローしているかを確認</li>
     </ul>
     <h2>ログイン</h2>
     <p>サーバーのホスト名(<code>@user@host</code>の<code>host</code>部分)を入力: <input type="text" id="host" spellcheck="false" autocorrect="off" /></p>
@@ -66,7 +66,7 @@
     const h = document.getElementById("host");
     const u = document.getElementById("url");
     h.addEventListener("input", () => {
-      const url = `https://${h.value}/miauth/{misskey_session_id}?callback=https%3A%2F%2Ff2.4587-aya-0p.work%2Fauth%2F${h.value}%3Fpath%3D{path}&name=%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E9%96%B2%E8%A6%A7&icon=https%3A%2F%2F4587-aya-0p.work%2Ficons%2Ficon-512x512.png`;
+      const url = `https://${h.value}/miauth/{misskey_session_id}?callback=https%3A%2F%2Ff2.ay0.org%2Fauth%2F${h.value}%3Fpath%3D{path}&name=%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E9%96%B2%E8%A6%A7&icon=https%3A%2F%2Fay0.org%2Ficons%2Ficon-512x512.png`;
       u.innerHTML = url;
       u.href = url;
     });

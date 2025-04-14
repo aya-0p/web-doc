@@ -26,7 +26,7 @@
 
 # 使用するサイト
 
-- ここ: <https://4587-aya-0p.work/init>
+- ここ: <https://ay0.org/init>
 - GitHub: <https://github.com/>
 - ソースコードがおいてある場所: <https://github.com/aya-0p/contest>
 
@@ -70,19 +70,19 @@ $ git config --global user.email "email" # emailをGitHubで設定したemailに
 
 ### 他の人の変更を受け取る
 
-<img src="https://f.4587-aya-0p.work/misskey/753c7ecb-211e-4e23-98fc-bd95de9ad57b.png" width="480">
+<img src="https://f.ay0.org/misskey/753c7ecb-211e-4e23-98fc-bd95de9ad57b.png" width="480">
 
 ### 他の人に変更を送る
 
-<img src="https://f.4587-aya-0p.work/misskey/dcab5359-389d-45fd-8de5-2569207c3f43.webp" width="480">
+<img src="https://f.ay0.org/misskey/dcab5359-389d-45fd-8de5-2569207c3f43.webp" width="480">
 
-<img src="https://f.4587-aya-0p.work/misskey/c272a55f-c566-461c-9eb5-c5518a790dff.png" width="480">
+<img src="https://f.ay0.org/misskey/c272a55f-c566-461c-9eb5-c5518a790dff.png" width="480">
 
 ## プログラムの実行
 
 - 右上の再生ボタンをクリック
 
-  <img src="https://f.4587-aya-0p.work/misskey/6df648a7-6543-492c-9f50-1e328430990b.png" width="480">
+  <img src="https://f.ay0.org/misskey/6df648a7-6543-492c-9f50-1e328430990b.png" width="480">
 
 # 知っておくと便利な情報
 
@@ -116,7 +116,7 @@ $ git config --global user.email "email" # emailをGitHubで設定したemailに
 
   - カーソルを合わせると情報が見れる(画像のドキュメントは間違えてますが修正済みです)
 
-    <img src="https://f.4587-aya-0p.work/misskey/0ad9ca0a-2894-490e-a567-8813942aa76e.webp" width="480">
+    <img src="https://f.ay0.org/misskey/0ad9ca0a-2894-490e-a567-8813942aa76e.webp" width="480">
 
 - 書き方:
 

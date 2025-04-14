@@ -26,7 +26,7 @@
   - [あや～(@aya\_@misskey.io)](https://misskey.io/@aya_)
   - [あや(@aya_0p@misskey.io)](https://misskey.io/@aya_0p)
 - aya's misskey
-  - [aya(@aya@mi.4587-aya-0p.work)](https://mi.4587-aya-0p.work/@aya)
+  - [aya(@aya@mi.ay0.org)](https://mi.ay0.org/@aya)
 
 ### GitHub
 
@@ -54,8 +54,8 @@
 
 ### Mail
 
-- <main@4587-aya-0p.work>
-- <misskey@4587-aya-0p.work> ミスキー関連はこちらへ
+- <main@ay0.org>
+- <misskey@ay0.org> ミスキー関連はこちらへ
 - <4587.aya.0p@gmail.com>
 - <4587game.aya@gmail.com>
 
@@ -63,7 +63,7 @@
 
 ### WebSite
 
-- <https://4587-aya-0p.work>
+- <https://ay0.org>
 
 ### Amazonほしいかもしれないものリスト
 
