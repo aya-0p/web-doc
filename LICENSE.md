@@ -28,4 +28,4 @@ MIT License
 
 ## style.css
 
-MIT License (crated by github)
+MIT License (created by github)
