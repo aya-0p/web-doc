@@ -1,0 +1,10 @@
+{
+  "config": {
+    "no-alt-text": false,
+    "no-duplicate-heading": false,
+    "line-length": false,
+    "commands-show-output": false,
+    "no-inline-html": false
+  },
+  "gitignore": true
+}
