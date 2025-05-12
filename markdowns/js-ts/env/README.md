@@ -16,7 +16,7 @@ Node.js は公式ページからダウンロード/インストールできる
 ### Linux
 
 ```bash
-# 帰ってくるメッセージは環境により異なります。
+# 返ってくるメッセージは環境により異なります。
 $ curl https://get.volta.sh | bash
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
@@ -38,7 +38,6 @@ success: installed and set node@22.15.0 (with npm@10.9.2) as default
 ### Windows
 
 ```bash
-# 帰ってくるメッセージは環境により異なります。
 $ winget install Volta.Volta
 $ volta install node
 success: installed and set node@22.15.0 (with npm@10.9.2) as default

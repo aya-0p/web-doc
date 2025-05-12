@@ -88,3 +88,19 @@ $ node index
 # package.jsonにしていしているならそれでいい
 $ node .
 ```
+
+## 実行（node@23.6.0以降のみ）
+
+もうトランスパイルはいらない
+
+実験的機能のため、本番環境では使わないのが無難
+
+```bash
+$ node --experimental-transform-types index.ts
+```
+
+`enum`や`namespace`などを使っていない(型情報しか利用していない)場合はオプションも不要
+
+```bash
+$ node index.ts
+```

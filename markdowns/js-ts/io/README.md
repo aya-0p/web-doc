@@ -25,3 +25,19 @@ const stdin = require("fs").readFileSync("/dev/stdin", "utf8");
 // "in1 in2 in3"
 // のように、入力のスペースなどもそのまま入ってきます
 ```
+
+対話型にする場合は`node:readline`でもできます（競技プログラミングでは上の方法のほうがやりやすいかも）
+
+```javascript
+const readline = require('node:readline');
+
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout,
+});
+
+rl.question("ここに質問内容", (data) => {
+  console.log(`入力内容: ${data}`);
+  rl.close();
+});
+```

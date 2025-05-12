@@ -1,8 +1,23 @@
 # 実行方法
 
-## そのまま実行する
+## 手元で打ち込んで実行する
 
-`node`のあとに実行したいファイルを指定するだけです。
+`node`でできます
+
+`.exit`と打つか、`Ctrl` + `D`で終了できます
+
+```bash
+$ node
+Welcome to Node.js v22.15.0.
+Type ".help" for more information.
+> 1 + 1 # > で始まる行が自分の入力です
+2
+> .exit
+```
+
+## ファイルをそのまま実行する
+
+`node`のあとに実行したいファイルを指定するだけです
 
 ```bash
 $ cat main.js

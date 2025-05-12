@@ -158,6 +158,10 @@ JavaScriptの数値は浮動小数点数のため、`0`(`+0`)と`-0`は厳密に
 0 === -0 // true
 Object.is(0, -0) // false
 Object.is(NaN, NaN) // true
+
+// ちなみに、0, -0は以下でもわかります
+1 / 0 // Infinity
+1 / -0 // -Infinity
 ```
 
 ## 値の比較はしないが条件分岐でよく使われるもの
