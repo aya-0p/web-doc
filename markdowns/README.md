@@ -18,12 +18,13 @@ ay0.orgに変更されました。今後1年間ほどは自動的にリダイレ
 
 ## Links
 
-- [About me](./aboutme)
-- [配布素材](./share)
-- [いろいろなプログラム](./programs)
-- [ゆあほぷの情報](./youarehope)
-- [キャラクターおよび合成音声、文山 彩の紹介](./voice)
+- [About me](./aboutme/README.md)
+- [配布素材](./share/README.md)
+- [いろいろなプログラム](./programs/README.md)
+- [ゆあほぷの情報](./youarehope/foods/README.md)
+- [キャラクターおよび合成音声、文山 彩の紹介](./voice/README.md)
 <!-- - [授業「プログラミング」で利用した資料](./init) -->
+- [Rustメモ(作成中)](./rust/README.md)
 
 ## 更新情報
 
