@@ -33,8 +33,16 @@ todo:
       - [配列](#配列)
       - [Vec](#vec)
       - [配列Vec共通](#配列vec共通)
-    - [Result\<...\>](#result)
-    - [Option\<...\>](#option)
+    - [Result](#result)
+    - [Option](#option)
+  - [条件分岐](#条件分岐)
+    - [if](#if)
+    - [loop](#loop)
+    - [while](#while)
+    - [for](#for)
+    - [if\_let](#if_let)
+    - [while\_let](#while_let)
+  - [関数](#関数)
   - [macro](#macro)
     - [使用](#使用)
     - [作成](#作成)
@@ -235,17 +243,131 @@ arr.sort();
 
 ```
 
-### Result<...>
+### Result
 
 結果と返り値を持つもの, `Ok()` or `Err()`
 
 `is_ok()`や`is_err()`で問題の有無を確認でき、`ok()`や`err()`で内容を`Option<...>`で取得できる
 
-### Option<...>
+### Option
 
 値を持たないかもしれないもの, `Some()` or `None`
 
 `配列.get(インデックス)`で配列外を参照したときなどに出てくる
+
+## 条件分岐
+
+### if
+
+条件式では`()`がいらない
+
+`if`
+
+```rust
+let a: i32 = 0;
+if a > 0 {
+  println!("a is positive");
+} else if a < 0 {
+  println!("a is negative")
+} else {
+  println!("a is zero")
+}
+```
+
+ifは文ではなく式のため、以下のようなことができる
+
+```rust
+
+let a = 0;
+// ifの結果をbに代入する
+// この場合はelseが必須
+let b = if a > 0 {
+  "positive" // ここに;がないのは、これを返り値とするため。
+} else if a < 0 {
+  "negative"
+} else {
+  "zero"
+}; // ここに;が必要
+println!("{}", b);
+```
+
+### loop
+
+無限ループ
+
+```rust
+loop {
+  println!("!");
+}
+println!("?"); // ここには到達しない
+```
+
+### while
+
+条件を満たす限り繰り返す
+
+条件式には`()`不要
+
+```rust
+let mut i = 0;
+while i < 10 {
+  i += 1;
+}
+assert_eq!(i, 10);
+```
+
+### for
+
+範囲内で繰り返す
+
+```rust
+let a: Vec<i32> = vec![0, 1, 2];
+for x in a.iter() {
+//       ^^^^^^^^ forで回すには配列.iter()とする
+  println!("{}", x);
+}
+println!("{:?}", a);
+
+for x in a {
+//       ^ 配列.iter()としないと
+  println!("{}", x);
+}
+println!("{:?}", a); // error: ここで利用できない
+```
+
+### if_let
+
+以下のようなことができる
+
+```rust
+let a: Vec<i32> = vec![0, 1, 2];
+let b: Option<&i32> = a.get(3);
+if let Some(c: &i32) = b {
+  println!("{}", c);
+} else {
+  println!("None");
+}
+```
+
+### while_let
+
+[if_let](#if_let)と同じ使い方
+
+## 関数
+
+`fn`で始める
+
+どの場所に書いても構わない（利用よりも上に宣言を書く必要がない）
+
+```rust
+fn main() {
+  test();
+}
+
+fn test() {
+  println!("hello");
+}
+```
 
 ## macro
 
