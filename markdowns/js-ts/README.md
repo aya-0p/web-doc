@@ -19,3 +19,4 @@
 - [TypeScriptとは](./ts/README.md)
 - [型の話](./types/README.md)
 - [トランスパイルと実行](./run-ts/README.md)
+- [その他](./etc/README.md)
