@@ -14,7 +14,7 @@
 
 ### X(Twitter)
 
-- [あや～(@ay_You_are_Hope)](https://twitter.com/aya_you_are_hope)
+- [あや～(@ay_You_are_Hope)](https://twitter.com/ay_you_are_hope)
 - [aya's bot(@ayas_bot)](https://twitter.com/ayas_bot)
 - [あゆ@ay_YaH_info](https://twitter.com/ay_YaH_info)
 
