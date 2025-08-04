@@ -22,7 +22,7 @@ const char = 'a'; // カーソルを当てるとstringと表示(VSCode)
 
 C++ の `int` はない
 
-浮動小数点のため、NaNやInfinity, -Infinityも数字である
+浮動小数点のため、NaN や Infinity, -Infinity も数字である
 
 ```typescript
 const numberType: number = 42;
@@ -72,7 +72,7 @@ typeof _null // object
 
 `Symbol()`でのみ作ることができる
 
-`unique symbol`とすることで`symbol`の代入を禁止できる(letやvarの変数宣言で使えない)
+`unique symbol`とすることで`symbol`の代入を禁止できる(let や var の変数宣言で使えない)
 
 ```typescript
 const sym1: unique symbol = Symbol("symbol");
@@ -94,7 +94,7 @@ new Date(0); // 1970-01-01T00:00:00.000Z
 ```
 
 - `Function`(`function`): 関数
-  - 型名はFunctionだが、(`typeof finctionName`)で返す文字がfunctionのためこの表記
+  - 型名は Function だが、(`typeof finctionName`)で返す文字が function のためこの表記
   - 多くの場合`(...arg: type): returnType`のように引数と返り値を含めた形の型を使う
 
 ```typescript
@@ -212,8 +212,8 @@ let a4: typeDefinedA4 = a1;
 
 - `"任意の文字列"`: 特定の文字しか入らない
 - `任意の数字`: 特定の数字しか入らない
-  - NaNやInfinity, -Infinityは使えない
-- `任意の整数n`: 特定のbigintしか入らない
+  - NaN や Infinity, -Infinity は使えない
+- `任意の整数n`: 特定の bigint しか入らない
 - `true`: true
 - `false`: false
 
@@ -253,7 +253,7 @@ let stringAndNumber: string & number; // never, 文字列かつ数字なんて�
 ### `<T>`: 型内の変数
 
 - `type`, `interface`などで使える(変数/定数宣言では使えない)
-- `Array<T>`はTの型を要素に持つ配列
+- `Array<T>`は T の型を要素に持つ配列
   - `Array<string>`: `["a", "b"]`
   - `Array<number>`: `[1, 2]`
 - `Obj<T> = { a: T }`で`T=any`とすれば`{ a: any }`となる
@@ -309,8 +309,8 @@ a.a; // string
   - なにも指定しないとこれになる
 - protected: 自分自身とこれを継承したクラスからアクセス可能
 - private: 自分自身のみアクセス可能
-- \#: privateと同じ
-  - これだけJavaScriptで定義されているため、トランスパイル後もアクセスできない
+- \#: private と同じ
+  - これだけ JavaScript で定義されているため、トランスパイル後もアクセスできない
 
 ```typescript
 class Class1 {
@@ -367,7 +367,7 @@ class Class {
 
 変数への代入や利用と同じように使えるが、そこで関数が動くかんじです
 
-getとsetは同時に利用できます
+get と set は同時に利用できます
 
 - get
   - 代入時に動く
@@ -375,7 +375,7 @@ getとsetは同時に利用できます
   - 返り値を指定する
 - set
   - 利用時に動く
-  - 引数は1つだけ指定する
+  - 引数は 1 つだけ指定する
   - 返り値は指定しない
 
 ```typescript
@@ -397,7 +397,7 @@ c.a = "a2"; // stdout: "a2"
 
 ### classとinterface
 
-classが特定のinterfaceを満たしているかを確認することができます
+class が特定の interface を満たしているかを確認することができます
 
 `type = ...`の方でも使えます(が、オブジェクト型である必要があります)
 
@@ -446,7 +446,7 @@ b.d; // "d"
 c.d; // error
 ```
 
-クラスは`extends`を用いて継承できます (interfaceでもできます)
+クラスは`extends`を用いて継承できます (interface でもできます)
 
 ```typescript
 class Class1 {

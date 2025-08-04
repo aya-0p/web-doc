@@ -2,13 +2,13 @@
 
 ここではサーバーサイド(Node.js)のみを扱っています
 
-Webではstdin/stdout/stderrは扱えません
+Web では stdin/stdout/stderr は扱えません
 
 ## 出力
 
-多くの場合、stdoutは`console.log()`, `console.info()`, `console.debug()`で表示されます
+多くの場合、stdout は`console.log()`, `console.info()`, `console.debug()`で表示されます
 
-stderrは`console.warn()`, `console.error()`です
+stderr は`console.warn()`, `console.error()`です
 
 ### それぞれ何が違う？
 

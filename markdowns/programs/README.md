@@ -88,7 +88,7 @@ check(function (a, b, c) {
 
 数字を整理する
 
-javascript
+JavaScript
 
 ```javascript
 const cleanNumber = (number, length, radix = 10, use = false) => {
@@ -180,7 +180,7 @@ ArrayBuffer {
 
 ## 4
 
-16進法の数をログ(eebug, info, log, warn, errorのみ)
+16 進法の数をログ(eebug, info, log, warn, error のみ)
 
 ```javascript
 (() => {

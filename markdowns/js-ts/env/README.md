@@ -94,7 +94,7 @@ $ pnpm init
 
 - /your-project-name/
   - (.editorconfig)
-  - .git/
+  - .Git/
     - ...
   - (.gitattributes)
   - (.gitignore)

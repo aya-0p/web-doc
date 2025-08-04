@@ -1,9 +1,12 @@
 {
-  "name": "szpp-siryou",
+  "name": "web-doc",
   "scripts": {
-    "lint": "markdownlint-cli2 --config .markdownlint-cli2.jsonc \"**/*.md\""
+    "lint": "markdownlint-cli2 --config .markdownlint-cli2.jsonc \"**/*.md\" && textlint --config .textlintrc.json \"**/*.md\"",
+    "fmt": "markdownlint-cli2 --fix --config .markdownlint-cli2.jsonc \"**/*.md\" && textlint --fix --config .textlintrc.json \"**/*.md\""
   },
   "devDependencies": {
-    "markdownlint-cli2": "*"
+    "markdownlint-cli2": "*",
+    "textlint": "*",
+    "textlint-rule-preset-ja-spacing": "*"
   }
 }

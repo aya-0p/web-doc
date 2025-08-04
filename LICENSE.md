@@ -16,7 +16,7 @@ or
 
 ## markdowns以下
 
-license部分を確認してください
+license 部分を確認してください
 
 ## youarehope以下
 
@@ -28,4 +28,4 @@ MIT License
 
 ## style.css
 
-MIT License (created by github)
+MIT License (created by GitHub)

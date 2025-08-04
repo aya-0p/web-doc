@@ -13,7 +13,7 @@
   - [前提知識](#前提知識)
   - [初期設定](#初期設定)
     - [Git](#git)
-    - [VSCodeの拡張機能をインストール](#vscodeの拡張機能をインストール)
+    - [VSCode の拡張機能をインストール](#vscode-の拡張機能をインストール)
   - [基本の使い方](#基本の使い方)
     - [プログラムの共有](#プログラムの共有)
       - [他の人の変更を受け取る](#他の人の変更を受け取る)
@@ -21,7 +21,7 @@
     - [プログラムの実行](#プログラムの実行)
   - [知っておくと便利な情報](#知っておくと便利な情報)
     - [便利なショートカットキーの一覧](#便利なショートカットキーの一覧)
-    - [Issueを使う](#issueを使う)
+    - [Issue を使う](#issue-を使う)
     - [ドキュメントを書く](#ドキュメントを書く)
     - [コンパイルエラーを読む](#コンパイルエラーを読む)
     - [コーディング規約](#コーディング規約)
@@ -35,7 +35,7 @@
 
 ## 前提知識
 
-1. ↓の使い方
+1. ↓ の使い方
 
    ```sh
 
@@ -43,7 +43,7 @@
    $ code . # run vscode
    ```
 
-   - $で始まっているものはすべてTerminal(端末)で実行するものです
+   - $で始まっているものはすべて Terminal(端末)で実行するものです
    - `$`と`#`以降の文字以外をコピー&ペーストして実行します。
    - つまり上の例では`cd ~`と`code .`を実行します。
 
@@ -54,7 +54,7 @@
 
 ### Git
 
-- 次の2つを実行
+- 次の 2 つを実行
 
 ```sh
 
@@ -62,7 +62,7 @@ $ git config --global user.name "username" # usernameをGitHubで設定したuse
 $ git config --global user.email "email" # emailをGitHubで設定したemailに変更
 ```
 
-### VSCodeの拡張機能をインストール
+### VSCode の拡張機能をインストール
 
 - Extension Pack for Java
 - GitHub Pull Requests and Issues
@@ -102,12 +102,12 @@ $ git config --global user.email "email" # emailをGitHubで設定したemailに
 | `Ctrl` + `y`           | やり直す(編集を一つ後の状態にする)     |
 | `Ctrl` + `Shift` + `i` | フォーマット(プログラムをきれいにする) |
 
-### Issueを使う
+### Issue を使う
 
 - URL: <https://github.com/aya-0p/contest/issues>
 - 今後すべきこと、起きたバグ、新たな機能の提案などを記録できる
 - `New Issue`をクリックしたあと、タイトルと本文を入力して`Submit new issue`
-- VSCodeの左端のメニュー内の猫のアイコンからでも確認できる
+- VSCode の左端のメニュー内の猫のアイコンからでも確認できる
 - こんな感じ: <https://github.com/aya-0p/contest/issues/1>
 
 ### ドキュメントを書く
@@ -181,7 +181,7 @@ $ git config --global user.email "email" # emailをGitHubで設定したemailに
    Exception running application MapGame
    ```
 
-   - MoveChara.javaの82行目周辺で`;`忘れを探す
+   - MoveChara.java の 82 行目周辺で`;`忘れを探す
 
 2. 型間違い
 
@@ -224,15 +224,15 @@ $ git config --global user.email "email" # emailをGitHubで設定したemailに
    Exception running application MapGame
    ```
 
-   - MoveChara.javaの83行目周辺で`int`型の変数(や定数)に`String`型を代入していないか確認
+   - MoveChara.java の 83 行目周辺で`int`型の変数(や定数)に`String`型を代入していないか確認
 
 ### コーディング規約
 
 - 読みやすければなんでもいいですが、推奨として以下のものがあります
-- `*.java`ファイルのインデントはスペース4つ
-- `*.fxml`ファイルのインデントはスペース2つ
+- `*.java`ファイルのインデントはスペース 4 つ
+- `*.fxml`ファイルのインデントはスペース 2 つ
 - 変数/定数名等はそれだけでなにかわかるようにする
-- その他は第3回の講義資料にある`Javaコーディング標準.pdf`を参照
+- その他は第 3 回の講義資料にある`Javaコーディング標準.pdf`を参照
 
 ### その他の補足
 
@@ -280,10 +280,10 @@ $ git config --global user.email "email" # emailをGitHubで設定したemailに
 
 2. ゲッタとセッタ
 
-   - 説明は第7回資料の26-27ページを参照
+   - 説明は第 7 回資料の 26-27 ページを参照
    - なんで必要なのか？
      - 値は外部に見せたいが、変更してほしくないとき
-     - 値を変更してもよいが指定した値以外にしてほしくないとき(nullなど)
+     - 値を変更してもよいが指定した値以外にしてほしくないとき(null など)
    - 例
 
    ```java

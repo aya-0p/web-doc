@@ -11,7 +11,7 @@ $ pnpm tsc <file>
 
 ## tsconfig.json
 
-tsconfig.jsonでトランスパイルの設定ができます
+tsconfig.json でトランスパイルの設定ができます
 
 以下を実行すると雛形が作成されます
 
@@ -40,7 +40,7 @@ $ cat tsconfig.json
 ...
 ```
 
-一度設定するとファイルを指定しなくても良くなります(tsconfig.jsonで指定するため)
+一度設定するとファイルを指定しなくても良くなります(tsconfig.json で指定するため)
 
 ```bash
 $ ls
@@ -48,37 +48,37 @@ index.ts  node_modules  package.json  pnpm-lock.yaml  tsconfig.json
 $ pnpm tsc
 ```
 
-以下ではtsconfig.jsonの設定のうち、とりあえず必要なものを書きます
+以下では tsconfig.json の設定のうち、とりあえず必要なものを書きます
 
 詳細はここに乗っています<https://www.typescriptlang.org/tsconfig/>
 
 ### compilerOptions.target
 
-どのバージョンのJavaScriptにトランスパイルするか
+どのバージョンの JavaScript にトランスパイルするか
 
 指定しないと古のバージョン(ES5)になる
 
-Node.jsのlatestを使うなら一番新しいのを選べばいいが、それ以外では実行環境に合わせる（とくにWeb）
+Node.js の latest を使うなら一番新しいのを選べばいいが、それ以外では実行環境に合わせる（とくに Web）
 
 ### compilerOptions.module
 
 どの実行環境で動かすかを指定する
 
-CommonJSかES??か(その他か)
+CommonJS か ES?? か(その他か)
 
-ES??を使えばimport/exportを用いた形式になる
+ES?? を使えば import/export を用いた形式になる
 
-CommonJSを使えばrequire/(module.)exports.??を用いた形式になる
+CommonJS を使えば require/(module.)exports.?? を用いた形式になる
 
 ### include / exclude
 
 どのファイルをトランスパイルするか/しないか
 
-`src/**/*.ts`と指定すればsrcディレクトリ以下のすべての".ts"で終わるファイルをトランスパイルする
+`src/**/*.ts`と指定すれば src ディレクトリ以下のすべての".ts"で終わるファイルをトランスパイルする
 
 ## 実行
 
-JavaScriptの実行と同じ
+JavaScript の実行と同じ
 
 ```bash
 # Node.js

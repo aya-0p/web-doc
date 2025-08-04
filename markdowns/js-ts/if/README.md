@@ -29,7 +29,7 @@ function (b) {
 
 ### bool ? ifTrue : ifFalse
 
-if文を1行にまとめたものです
+if 文を 1 行にまとめたものです
 
 ```javascript
 function check(c) {
@@ -93,7 +93,7 @@ switch (a) {
 
 ## 値の比較
 
-JavaScriptでは値が同じか調べる方法がいくつかあります
+JavaScript では値が同じか調べる方法がいくつかあります
 
 ### 等価 (`==`)
 
@@ -150,7 +150,7 @@ isNaN(NaN) // true
 
 ### `Object.is`
 
-JavaScriptの数値は浮動小数点数のため、`0`(`+0`)と`-0`は厳密には異なります
+JavaScript の数値は浮動小数点数のため、`0`(`+0`)と`-0`は厳密には異なります
 
 `Object.is()`ではこれを検出できます(`NaN`も検知できます)
 
@@ -199,7 +199,7 @@ Object.create(null) instanceof Object // false
 - `"bigint"`
   - bigint
 - `"boolean"`
-  - trueとfalse
+  - true と false
 - `"symbol"`
   - Symbol()の返り値
 - `"undefined"`

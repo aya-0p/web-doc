@@ -36,7 +36,7 @@ Hello, world!
 
 ## package.jsonで指定
 
-package.jsonのmainに実行したいファイルを指定すればファイルを指定する必要がなくなります
+package.json の main に実行したいファイルを指定すればファイルを指定する必要がなくなります
 
 ```bash
 $ cat package.json
@@ -49,7 +49,7 @@ $ node .
 Hello, world!
 ```
 
-scripts内に実行したいプログラムを指定することもできます。ここではNode.js以外も動くと同時に、nodeの実行オプションも事前に指定することができます
+scripts 内に実行したいプログラムを指定することもできます。ここでは Node.js 以外も動くと同時に、node の実行オプションも事前に指定することができます
 
 ```bash
 # tscについては一旦無視しておいてください
@@ -72,7 +72,7 @@ Hello, world!
 
 ## nodemonを利用する
 
-指定したファイルが更新されたときに自動的にファイルを再実行してくれます。Web開発時に便利です。
+指定したファイルが更新されたときに自動的にファイルを再実行してくれます。Web 開発時に便利です。
 
 <https://github.com/remy/nodemon>
 
