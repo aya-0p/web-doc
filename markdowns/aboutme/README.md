@@ -116,6 +116,8 @@
 
 ここ (<https://ay0.org>)
 
+内容は<https://github.com/aya-0p/web-doc>で公開
+
 言語：JavaScript, TypeScript (Node.js)
 
 ### DiscordBot
