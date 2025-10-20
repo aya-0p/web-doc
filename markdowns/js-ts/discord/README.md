@@ -1,3 +1,4 @@
+```ts
 import { Client, GatewayIntentBits } from "discord.js";
 import { config } from "dotenv";
 config();
@@ -13,3 +14,4 @@ client.on("messageCreate", (msg) => {
 
 client.login(process.env.TOKEN);
 
+```
