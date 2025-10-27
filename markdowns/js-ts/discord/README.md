@@ -179,7 +179,7 @@ let myFriendHome = "Taisho-ku, Osaka, Japan";
 ではこのようにまとめてみましょう
 
 ```ts
-let my = {
+let me = {
   height: 160,
   weight: 50,
   home: "Shinzyuku-ku, Tokyo, Japan",
@@ -252,5 +252,49 @@ msg = {
   author: {
     displayName: "送信者の名前",
   }
+}
+```
+
+これを型で表現することもできます
+
+```ts
+interface Human {
+  height: number;
+  weight: number;
+  home: string;
+  // ...
+}
+let my: Human = {
+  height: 160,
+  weight: 50,
+  home: "Shinzyuku-ku, Tokyo, Japan",
+};
+
+let myFriend: Human = {
+  height: 180,
+  weight: 80,
+  home: "Taisho-ku, Osaka, Japan",
+};
+
+let other: Human = {
+  height: 80,
+  weight: 45
+}
+```
+
+これを貼り付けると other でエラーが表示されましたか？other は Human の home の要素がないのでエラーとなります。
+
+本日最後の課題
+
+各メッセージには id が振られてあります。メンションが来たときにそのメッセージ(または送信者)の id を 8192 で割った値を返信してみましょう。
+
+```ts
+msg = {
+  content: "メッセージの内容"
+  author: {
+    displayName: "送信者の名前",
+    id: "ID(文字列)"
+  },
+  id: "ID(文字列)"
 }
 ```
