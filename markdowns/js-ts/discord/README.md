@@ -156,3 +156,101 @@ msg = "hello,";
 msg += "world!"; // <- このように+=を使えば変数に文字を追加できます
 console.log(msg); // hello,world!
 ```
+
+### オブジェクト
+
+まず、人間を考えてみます。
+
+人間には身長、体重...といったようにいろんな要素があります。これをプログラムで書いてみましょう
+
+```ts
+let myHeight = 160;
+let myWeight = 50;
+let myHome = "Shinzyuku-ku, Tokyo, Japan";
+
+let myFriendHeight = 180;
+let myFriendWeight = 80;
+let myFriendHome = "Taisho-ku, Osaka, Japan";
+// ...
+```
+
+このように書いていけば読みにくいですよね？特に共通化が難しくなります。（共通化がわからなければ一旦スキップ）
+
+ではこのようにまとめてみましょう
+
+```ts
+let my = {
+  height: 160,
+  weight: 50,
+  home: "Shinzyuku-ku, Tokyo, Japan",
+};
+
+let myFriend = {
+  height: 180,
+  weight: 80,
+  home: "Taisho-ku, Osaka, Japan",
+};
+```
+
+このように書けばちょっとは見やすくなったのではないでしょうか？これをオブジェクトって言います。
+
+では実際のプログラムでみてみます。
+
+```ts
+import { Client, GatewayIntentBits } from "discord.js";
+import { config } from "dotenv";
+config();
+
+const client = new Client({
+  intents: [GatewayIntentBits.GuildMessages, GatewayIntentBits.GuildMembers, GatewayIntentBits.Guilds, GatewayIntentBits.MessageContent]
+});
+
+client.login(process.env.TOKEN);
+
+client.on("messageCreate", async (msg) => {
+  if (msg.mentions.members?.has((client as Client<true>).user.id)) {
+    const data = {
+      test: "Hello, world!",
+      aaaa: "Bye!",
+    };
+    await msg.reply(data.test);
+    process.exit();
+  }
+});
+```
+
+`const data = {...}`でオブジェクトを作成しています。これを`data.test`と書くと`"Hello, world!"`となります。
+
+実行して bot にメンションしてみると動くと思います。
+
+では実践してみましょう
+
+```ts
+import { Client, GatewayIntentBits } from "discord.js";
+import { config } from "dotenv";
+config();
+
+const client = new Client({
+  intents: [GatewayIntentBits.GuildMessages, GatewayIntentBits.GuildMembers, GatewayIntentBits.Guilds, GatewayIntentBits.MessageContent]
+});
+
+client.login(process.env.TOKEN);
+
+client.on("messageCreate", async (msg) => {
+  if (msg.mentions.members?.has((client as Client<true>).user.id)) {
+    await msg.reply(); //<- ???
+    process.exit();
+  }
+});
+```
+
+送られたメッセージのユーザー名を返信してみましょう。ちなみに msg はこのような構造になっています。
+
+```ts
+msg = {
+  content: "メッセージの内容"
+  author: {
+    displayName: "送信者の名前",
+  }
+}
+```
