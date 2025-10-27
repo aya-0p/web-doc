@@ -1,3 +1,35 @@
+# Typescript 講座 (Discord.js)
+
+## 2025-10-20
+
+```ts
+import { Client, GatewayIntentBits } from "discord.js";
+import { config } from "dotenv";
+config();
+
+const client = new Client({
+  intents: [
+    GatewayIntentBits.GuildMessages,
+    GatewayIntentBits.GuildMembers,
+    GatewayIntentBits.Guilds,
+    GatewayIntentBits.MessageContent,
+  ],
+});
+
+client.on("messageCreate", (msg) => {
+  if (msg.member?.user.bot) return;
+  msg.reply("hello!");
+});
+
+client.login(process.env.TOKEN);
+```
+
+## 2025-10-27
+
+### 型の基本
+
+まずは何も考えないでこのコードをコピペして実行しましょう(前回作った`main.ts`に上書きしてください)
+
 ```ts
 import { Client, GatewayIntentBits } from "discord.js";
 import { config } from "dotenv";
@@ -7,11 +39,120 @@ const client = new Client({
   intents: [GatewayIntentBits.GuildMessages, GatewayIntentBits.GuildMembers, GatewayIntentBits.Guilds, GatewayIntentBits.MessageContent]
 });
 
-client.on("messageCreate", (msg) => {
-  if (msg.member?.user.bot) return;
-  msg.reply("hello!");
-})
+client.login(process.env.TOKEN);
+
+client.on("ready", async (client) => {
+  const guild = await client.guilds.fetch("1429766551925555242");
+  const channel = await guild.channels.fetch("1429766553108484098");
+  if (channel != null && channel.isTextBased()) {
+    let msg: string;
+    msg = "こんにちは";
+    /*
+    ここでmsgにいろいろ代入してみよう
+    msg = 10;
+    msg = true;
+    */
+    await channel.send(msg);
+    process.exit();
+  }
+});
+```
+
+実行
+
+```bash
+$ pnpm tsc
+$ node main.js
+```
+
+`szpp-bot-test-2025`にメッセージが送信されましたか？(されない場合はお知らせください)
+
+`client.on("ready", async(client) => {...});`の中身を 1 つずつ説明(これ以外はいまはおまじないということに)
+
+- `const guild = await client.guilds.fetch("1429766551925555242");`: bot が知るいろんなサーバから`szpp-bot-test-2025`を指定
+- `const channel = await guild.channels.fetch("1429766553108484098");`: `szpp-bot-test-2025`のいろんなチャンネルから`一般`を指定
+- `if (channel != null && channel.isTextBased()) {}`: チャンネルが見つかったら...
+  - `let msg: string;`: 変数`msg`を設定
+  - `msg = "こんにちは";`: msg に「こんにちは」を代入
+  - `await channel.send(msg);`: `msg`の中身をメッセージとして送信
+  - `process.exit();`プログラムを終了する
+
+では、`msg`に`"こんにちは"`(文字列)以外の`10`(数値)や`true`(bool)を代入してみましょう
+
+```txt
+型 'number' を型 'string' に割り当てることはできません。ts(2322)
+(または)
+error TS2322: Type 'number' is not assignable to type 'string'.
+```
+
+エラーが出ます。これは`let msg: string;`の部分で`msg`には文字列しか入れてはいけないと明示したからです。(Java や C++ といった他の言語では当たり前ですが...)
+
+ではどんな型があるか見てみましょう
+
+|型名|説明|例|
+|--|--|--|
+|string|文字列|"こんにちは", "Hello, world!", 'a'|
+|number|数値(倍精度浮動小数点:double)|10, -30, 0.05, NaN, Infinity|
+|boolean|trueとfalse|true, false|
+|undefined|未定義(配列外など)|undefined|
+
+これ以外にもたくさんありますが、一旦これだけ覚えておきましょう。
+
+> int, longやキャラクタ型は無いの？  
+> ない。（整数型=bigint は存在するがここでは説明しない）
+
+### 型の変換
+
+でも数字を文字列にしたいことはいくらでもあります。たとえば計算結果をメッセージにして送りたい時...
+
+```ts
+msg = (10*2 + 4) / 5
+await channel.send(msg); // error
+```
+
+このようなことをすればエラーが消えます
+
+```ts
+msg = String((10*2 + 4) / 5);
+await channel.send(msg);
+```
+
+`String(...)`では...を文字列に強制的に変換してくれます。(Java の`toString()`のように)
+その他にも`Number(...)`とすれば数値に変換してくれたり、`Boolean(...)`とすれば true/false に変換してくれます。
+
+> 詳細  
+> `String()`では内部的に(...).toStringを呼んでいます。そのため`msg = ((10*2 * 4) / 5).toString()`としても動きます。
+
+ここからは新たに次のプログラムを使います。
+
+```ts
+import { Client, GatewayIntentBits } from "discord.js";
+import { config } from "dotenv";
+config();
+
+const client = new Client({
+  intents: [GatewayIntentBits.GuildMessages, GatewayIntentBits.GuildMembers, GatewayIntentBits.Guilds, GatewayIntentBits.MessageContent]
+});
 
 client.login(process.env.TOKEN);
 
+client.on("messageCreate", async (msg) => {
+  if (msg.mentions.members?.has((client as Client<true>).user.id)) {
+    const memberMessageContent = msg.content.replace(/<.+>/, "").trim();
+    let message = "";
+    message += "1024 *" + memberMessageContent + " = ";
+    // sendMessage += (1024と入力の積を追加したい)
+    await msg.reply(message);
+    process.exit();
+  }
+});
+```
+
+では、コメントのようにユーザから受け取ったメッセージ(`memberMessageContent`)に 1024 を掛けた値を返信してみましょう
+
+```ts
+let msg = "";
+msg = "hello,";
+msg += "world!"; // <- このように+=を使えば変数に文字を追加できます
+console.log(msg); // hello,world!
 ```
