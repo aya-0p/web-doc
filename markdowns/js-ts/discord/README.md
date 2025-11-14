@@ -298,3 +298,46 @@ msg = {
   id: "ID(文字列)"
 }
 ```
+
+## 2025-11-14
+
+おみくじを作ろう
+
+まずはテンプレート
+
+```ts
+import { Client, GatewayIntentBits } from "discord.js";
+import { config } from "dotenv";
+config();
+
+const client = new Client({
+  intents: [GatewayIntentBits.GuildMessages, GatewayIntentBits.GuildMembers, GatewayIntentBits.Guilds, GatewayIntentBits.MessageContent]
+});
+
+client.login(process.env.TOKEN);
+
+client.on("messageCreate", async (msg) => {
+  // メンションがされたら
+  if (msg.mentions.members?.has((client as Client<true>).user.id)) {
+    let replyMessageContent: string = "";
+    replyMessageContent = omikuji();
+    await msg.reply(replyMessageContent);
+  }
+});
+
+/// acknowledgements: created by @arkwnet
+
+const data: string[] = ["大吉", "吉", "凶"];
+
+function omikuji(): string {
+  return data[Math.floor(Math.random() * data.length)] ?? "";
+}
+```
+
+ちょっとずつ解説(おみくじの元のプログラムは[こちら](https://github.com/szpp-dev-team/omikuji/blob/main/step1/js/main.js))
+
+- `const data...`: おみくじの内容を定義
+- `function omikuji...`: おみくじの関数
+- `Math.floor(...)`: ...の数値(number)を整数に変換(切り捨て)
+- `Math.random()`: ランダムな数値, 0 以上 1 未満
+- `data.length`: 配列(data)の長さ
