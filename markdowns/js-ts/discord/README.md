@@ -397,3 +397,36 @@ function omikuji(): string {
 - `Math.floor(...)`: ...の数値(number)を整数に変換(切り捨て)
 - `Math.random()`: ランダムな数値, 0 以上 1 未満
 - `data.length`: 配列(data)の長さ
+
+```ts
+const data = [
+  {
+    name: "大吉",
+    rate: 0.01,
+  },
+  {
+    name: "中吉",
+    rate: 0.14,
+  },
+  {
+    name: "小吉",
+    rate: 0.15,
+  },
+  {
+    name: "末吉",
+    rate: 0.25,
+  },
+  {
+    name: "吉",
+    rate: 0.2,
+  },
+  {
+    name: "凶",
+    rate: 0.15,
+  },
+  {
+    name: "大凶",
+    rate: 0.1,
+  },
+];
+```
