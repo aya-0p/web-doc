@@ -1,5 +1,61 @@
 # Typescript 講座 (Discord.js)
 
+## 環境
+
+tsconfig.json
+
+```json
+{
+  "compilerOptions": {
+    "incremental": true,
+    "target": "ES2022",
+    "module": "NodeNext",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "sourceMap": true,
+    "moduleResolution": "NodeNext",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "noUncheckedIndexedAccess": true
+  },
+  "include": ["main.ts"]
+}
+
+```
+
+package.json
+
+```json
+{
+  "name": "szpp-discord-bot-lecture",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.10.0",
+  "dependencies": {
+    "@types/node": "^24.8.1",
+    "discord.js": "^14.23.2",
+    "dotenv": "^17.2.3",
+    "typescript": "^5.9.3"
+  }
+}
+
+```
+
+.env
+
+```env
+TOKEN=
+```
+
 ## 2025-10-20
 
 ```ts
