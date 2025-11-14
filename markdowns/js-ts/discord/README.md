@@ -430,3 +430,25 @@ const data = [
   },
 ];
 ```
+
+答え
+
+```ts
+function omikuji(): string {
+  const number = Math.random();
+  let temp = 0.0;
+  let result: number = 0;
+  for (let i = 0; i < data.length; i++) {
+    const d = data[i];
+    if (!d) throw new Error("Unknown Data");
+    temp += d.rate;
+    if (temp >= number) {
+      result = i;
+      break;
+    }
+  }
+  const d = data[result];
+  if (!d) throw new Error("Unknown Data");
+  return d.name;
+}
+```
