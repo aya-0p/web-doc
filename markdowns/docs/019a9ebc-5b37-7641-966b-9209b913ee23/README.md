@@ -11,3 +11,13 @@
 ## 今日作るもの
 
 <https://scratch.mit.edu/projects/1244950431/>
+
+## アンケート
+
+### 漢字あり
+
+<https://forms.gle/tpPbWtSnrJUD8kQp6>
+
+### ひらがな/カタカナのみ
+
+<https://forms.gle/fLu7Bvi1bZEJfakb7>
