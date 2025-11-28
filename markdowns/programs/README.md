@@ -310,6 +310,7 @@ string 3
 let input = require("fs")
     .readFileSync("/dev/stdin", "utf8")
     .split("\n")
+    // @ts-ignore
     .map((str) => str.split(" "))
     .flat(),
   i = 0n;
@@ -322,24 +323,25 @@ let input = require("fs")
     else return sortFunc.call(this, (a, b) => a - b);
   };
   // 文字列のsort
+    // @ts-ignore
   Array.prototype.charSort = sortFunc;
 })();
 
 const { readNumber, readBigInt, readString, log } = {
   readNumber() {
-    const t = input[i];
+    const t = input[Number(i)];
     i++;
     if (t === "") return readNumber();
     return Number(t);
   },
   readBigInt() {
-    const t = input[i];
+    const t = input[Number(i)];
     i++;
     if (t === "") return readBigInt();
     return BigInt(t);
   },
   readString() {
-    const t = input[i];
+    const t = input[Number(i)];
     i++;
     if (t === "") return readString();
     return String(t);
@@ -378,26 +380,32 @@ const datas = {
   /** @type {(length: number) => string[]} */
   readStrings: (length) => {
     const arr = [];
+    //@ts-ignore
     for (let i = 0; i < length; i++) arr.push(readString());
     return arr;
   },
   /** @type {(length: number) => number[]} */
   readNumbers: (length) => {
     const arr = [];
+    //@ts-ignore
     for (let i = 0; i < length; i++) arr.push(readNumber());
     return arr;
   },
   /** @type {(length: number) => bigint[]} */
   readBigInts: (length) => {
     const arr = [];
+    //@ts-ignore
     for (let i = 0; i < length; i++) arr.push(readBigInt());
     return arr;
   },
 };
 
 function main() {
-  process.exit();
+  const 変数名 = readString();
+  console.log();
+
 }
 
 main();
+
 ```
