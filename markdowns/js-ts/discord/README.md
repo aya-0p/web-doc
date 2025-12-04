@@ -22,7 +22,6 @@ tsconfig.json
   },
   "include": ["main.ts"]
 }
-
 ```
 
 package.json
@@ -47,7 +46,6 @@ package.json
     "typescript": "^5.9.3"
   }
 }
-
 ```
 
 .env
@@ -92,7 +90,12 @@ import { config } from "dotenv";
 config();
 
 const client = new Client({
-  intents: [GatewayIntentBits.GuildMessages, GatewayIntentBits.GuildMembers, GatewayIntentBits.Guilds, GatewayIntentBits.MessageContent]
+  intents: [
+    GatewayIntentBits.GuildMessages,
+    GatewayIntentBits.GuildMembers,
+    GatewayIntentBits.Guilds,
+    GatewayIntentBits.MessageContent,
+  ],
 });
 
 client.login(process.env.TOKEN);
@@ -145,16 +148,16 @@ error TS2322: Type 'number' is not assignable to type 'string'.
 
 ではどんな型があるか見てみましょう
 
-|型名|説明|例|
-|--|--|--|
-|string|文字列|"こんにちは", "Hello, world!", 'a'|
-|number|数値(倍精度浮動小数点:double)|10, -30, 0.05, NaN, Infinity|
-|boolean|trueとfalse|true, false|
-|undefined|未定義(配列外など)|undefined|
+| 型名      | 説明                          | 例                                 |
+| --------- | ----------------------------- | ---------------------------------- |
+| string    | 文字列                        | "こんにちは", "Hello, world!", 'a' |
+| number    | 数値(倍精度浮動小数点:double) | 10, -30, 0.05, NaN, Infinity       |
+| boolean   | true と false                 | true, false                        |
+| undefined | 未定義(配列外など)            | undefined                          |
 
 これ以外にもたくさんありますが、一旦これだけ覚えておきましょう。
 
-> int, longやキャラクタ型は無いの？  
+> int, long やキャラクタ型は無いの？  
 > ない。（整数型=bigint は存在するがここでは説明しない）
 
 ### 型の変換
@@ -162,14 +165,14 @@ error TS2322: Type 'number' is not assignable to type 'string'.
 でも数字を文字列にしたいことはいくらでもあります。たとえば計算結果をメッセージにして送りたい時...
 
 ```ts
-msg = (10*2 + 4) / 5
+msg = (10 * 2 + 4) / 5;
 await channel.send(msg); // error
 ```
 
 このようなことをすればエラーが消えます
 
 ```ts
-msg = String((10*2 + 4) / 5);
+msg = String((10 * 2 + 4) / 5);
 await channel.send(msg);
 ```
 
@@ -177,7 +180,7 @@ await channel.send(msg);
 その他にも`Number(...)`とすれば数値に変換してくれたり、`Boolean(...)`とすれば true/false に変換してくれます。
 
 > 詳細  
-> `String()`では内部的に(...).toStringを呼んでいます。そのため`msg = ((10*2 * 4) / 5).toString()`としても動きます。
+> `String()`では内部的に(...).toString を呼んでいます。そのため`msg = ((10*2 * 4) / 5).toString()`としても動きます。
 
 ここからは新たに次のプログラムを使います。
 
@@ -187,7 +190,12 @@ import { config } from "dotenv";
 config();
 
 const client = new Client({
-  intents: [GatewayIntentBits.GuildMessages, GatewayIntentBits.GuildMembers, GatewayIntentBits.Guilds, GatewayIntentBits.MessageContent]
+  intents: [
+    GatewayIntentBits.GuildMessages,
+    GatewayIntentBits.GuildMembers,
+    GatewayIntentBits.Guilds,
+    GatewayIntentBits.MessageContent,
+  ],
 });
 
 client.login(process.env.TOKEN);
@@ -258,7 +266,12 @@ import { config } from "dotenv";
 config();
 
 const client = new Client({
-  intents: [GatewayIntentBits.GuildMessages, GatewayIntentBits.GuildMembers, GatewayIntentBits.Guilds, GatewayIntentBits.MessageContent]
+  intents: [
+    GatewayIntentBits.GuildMessages,
+    GatewayIntentBits.GuildMembers,
+    GatewayIntentBits.Guilds,
+    GatewayIntentBits.MessageContent,
+  ],
 });
 
 client.login(process.env.TOKEN);
@@ -287,7 +300,12 @@ import { config } from "dotenv";
 config();
 
 const client = new Client({
-  intents: [GatewayIntentBits.GuildMessages, GatewayIntentBits.GuildMembers, GatewayIntentBits.Guilds, GatewayIntentBits.MessageContent]
+  intents: [
+    GatewayIntentBits.GuildMessages,
+    GatewayIntentBits.GuildMembers,
+    GatewayIntentBits.Guilds,
+    GatewayIntentBits.MessageContent,
+  ],
 });
 
 client.login(process.env.TOKEN);
@@ -334,8 +352,8 @@ let myFriend: Human = {
 
 let other: Human = {
   height: 80,
-  weight: 45
-}
+  weight: 45,
+};
 ```
 
 これを貼り付けると other でエラーが表示されましたか？other は Human の home の要素がないのでエラーとなります。
@@ -367,7 +385,12 @@ import { config } from "dotenv";
 config();
 
 const client = new Client({
-  intents: [GatewayIntentBits.GuildMessages, GatewayIntentBits.GuildMembers, GatewayIntentBits.Guilds, GatewayIntentBits.MessageContent]
+  intents: [
+    GatewayIntentBits.GuildMessages,
+    GatewayIntentBits.GuildMembers,
+    GatewayIntentBits.Guilds,
+    GatewayIntentBits.MessageContent,
+  ],
 });
 
 client.login(process.env.TOKEN);
@@ -451,4 +474,212 @@ function omikuji(): string {
   if (!d) throw new Error("Unknown Data");
   return d.name;
 }
+```
+
+## 2025-12-05?
+
+Class の話
+
+### 1. 構造と継承 (extends)
+
+生物一般を考えてみます。ここで生物は動物も植物も含みます。生物の要素を構造にするとこんな感じに表せると思います。
+
+```typescript
+interface 生物 {
+  /** cm */
+  大きさ: number;
+  /** y */
+  年齢: number;
+}
+```
+
+次に動物を考えてみます。同じように表してみます。
+
+```ts
+interface 動物 {
+  /** cm */
+  大きさ: number;
+  /** y */
+  年齢: number;
+  /** m/s */
+  現在の移動速度: number;
+}
+```
+
+更に細かく考えて、人間を考えてみます。同じように表します。
+
+```ts
+interface 人間 {
+  /** cm */
+  大きさ: number;
+  /** y */
+  年齢: number;
+  /** m/s */
+  現在の移動速度: number;
+  現在考えていること: string;
+}
+```
+
+人間と動物、生物で比較した時、生物の要素はどれも動物、人間にもありますし、動物の要素はどれも人間にもあります。これは人間は動物の一部ですし、動物は生物の一部ですので自明っぽく見られます。
+
+では、この「一部である」をプログラムでも表してみましょう。
+
+```ts
+interface 生物 {
+  /** cm */
+  大きさ: number;
+  /** y */
+  年齢: number;
+}
+
+interface 動物 extends 生物 {
+  /** m/s */
+  現在の移動速度: number;
+}
+
+interface 人間 extends 動物 {
+  現在考えていること: string;
+}
+```
+
+前のものと比較すると共通部分が消えるとともに「extends (上位のもの)」が増えました。この `extends` により関係を表すことができます。
+
+ここからはプログラムで見ていきます。
+
+```ts
+// これは上位の要素
+interface あ {
+  要素1: number;
+  要素2: string;
+  // 中身は別に関数でも良い(あまり使うことは無いかも)
+  要素3: () => void;
+}
+
+interface い extends あ {
+  // [extends あ] より要素1~3は「い」にも存在する
+  要素4: string;
+}
+```
+
+### 2. Class
+
+ここから、整数の計算を行なうプログラムを考えてみます。
+
+```ts
+interface int {
+  num: number;
+}
+function toInt(n: number): int {
+  return {
+    // Math.floorは切り捨て
+    num: Math.floor(int),
+  };
+}
+
+function add(a: int, b: int) {
+  return {
+    num: a.num + b.num,
+  };
+}
+
+function toString(n: int) {
+  return String(a.num);
+}
+
+function main() {
+  const a: int = toInt(10.5);
+  const b: int = toInt(3.14);
+  const c: int = add(a, b);
+  console.log(toString(c));
+}
+main();
+```
+
+足し算だけしかできませんが、少なくとも整数同士の足し算がこれでできます。しかし、ここで C/C++ でいう `unsigned int / uint32_t` を実装しようとすると同じように関数 `add` や関数 `toString` が必要になりそうです。TypeScript には引数の型によって実行する関数を変えるような機能はないのでうまくいきません。
+さらに、`n`は`{ num: number }`であるので
+
+```ts
+function main() {
+  const a: int = toInt(10.5);
+  a.num = 3.14;
+  const b: int = toInt(2.1);
+  const c: int = add(a, b);
+  console.log(toString(c)); // 5.14
+}
+```
+
+このように直接書き換えると整数型としたいのに小数点数が入ってしまいます。
+
+これらを解決するのが Class です。
+
+```ts
+class int {
+  private num: number;
+  constructor(a: number) {
+    this.num = Math.floor(a);
+  }
+  add(b: int) {
+    this.num += b.num;
+  }
+  static add(a: int, b: int): int {
+    return new int(a.num + b.num);
+  }
+}
+```
+
+- `class クラス名 {}` でクラスを作成することができます。
+- class には `constructor` が必要です。これはクラスを生成する時 = `new クラス名(...)` とするときに必要です。（作り方/使い方は他の関数と同じ）
+- class が持っておきたいデータを示しておきます。今回であれば整数値を保存しておきたいので `private num` としてあります。
+  - `private` はクラスの外から見れなくなります。
+  - `protected` は自分自身とこれを継承したものからは見れますが、外からは見れません。
+  - `public` または何も書かないとどこからでも見ることができます。
+- class が行いたい動作を示します。
+  - 関数のように書きますが、`function` は書きません。（private, protected, public も同じように使えます）
+- `static` を宣言することで `new クラス名(...)` をしなくても `クラス名.要素` や `クラス名.関数名(...)` とすると使うことができます。
+
+上のものは次のように使えます。
+
+```ts
+const a = new int(10.5);
+console.log(a); // int { num: 10 }
+const b = new int(7.9);
+console.log(b); // int { num: 7 }
+const c = int.add(a, b);
+console.log(c); // int { num: 17 }
+// console.log(c.num); // プロパティ 'num' はプライベートで、クラス 'int' 内でのみアクセスできます。
+```
+
+詳細はここにあります。 <https://ay0.org/js-ts/types/#%E3%82%AF%E3%83%A9%E3%82%B9(class)>
+
+課題：C++ の int (int32_t) の範囲で四則演算を行えるようにしてみましょう。
+
+### 3. 余談
+
+ここまでで int のクラスを作成しましたが、こんなことはできません。
+
+```ts
+const a = new int(4.6);
+console.log(Number(a)); // NaN
+```
+
+でも、こんなことができたら便利ですよね。
+
+```ts
+const a = new int(4.6);
+console.log(Number(a) + 3); // NaN
+```
+
+できます。
+
+```ts
+  [Symbol.toPrimitive](hint: "number" | "string" | "default") {
+    switch (hint) {
+      case "string":
+        return String(this.num);
+      case "number":
+        return this.num;
+      case "default":
+        return this.num;
+    }
+  }
 ```
