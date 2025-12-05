@@ -1,5 +1,20 @@
 # Typescript 講座 (Discord.js)
 
+- [Typescript 講座 (Discord.js)](#typescript-講座-discordjs)
+  - [環境](#環境)
+  - [2025-10-20](#2025-10-20)
+  - [2025-10-27](#2025-10-27)
+    - [型の基本](#型の基本)
+    - [型の変換](#型の変換)
+    - [オブジェクト](#オブジェクト)
+  - [2025-11-14](#2025-11-14)
+  - [2025-12-05?](#2025-12-05)
+    - [1. 構造と継承 (extends)](#1-構造と継承-extends)
+    - [2. Class](#2-class)
+    - [3. 余談](#3-余談)
+      - [get, set](#get-set)
+      - [toPrimitive](#toprimitive)
+
 ## 環境
 
 tsconfig.json
@@ -646,6 +661,8 @@ const b = new int(7.9);
 console.log(b); // int { num: 7 }
 const c = int.add(a, b);
 console.log(c); // int { num: 17 }
+a.add(b);
+console.log(a); // int { num: 17 }
 // console.log(c.num); // プロパティ 'num' はプライベートで、クラス 'int' 内でのみアクセスできます。
 ```
 
@@ -654,6 +671,65 @@ console.log(c); // int { num: 17 }
 課題：C++ の int (int32_t) の範囲で四則演算を行えるようにしてみましょう。
 
 ### 3. 余談
+
+#### get, set
+
+先程の int で後から値を設定できるようにしてみましょう。とはいえ、`num` を `public` にしてしまうと整数でない値も入れてしまえるので関数を用いて実装してみましょう。
+
+```ts
+class int {
+  private num: number;
+  constructor(a: number) {
+    this.num = Math.floor(a);
+  }
+  // 省略
+  setValue(a: number) {
+    this.num = Math.floor(a);
+  }
+  getValue(): number {
+    return this.num;
+  }
+}
+
+function main() {
+  const a = new int(4.6);
+  a.setValue(2.9);
+  console.log(a.getValue()); // 2
+}
+
+main();
+```
+
+Java を触ったことがある人なら見たことがある書き方だと思いますが、設定したり受け取ったりするたびに関数を呼び出すのは面倒ですよね。できれば `console.log(a.value)` で出力できたら便利。これを達成できるのが `get`, `set` です。
+
+```ts
+class int {
+  private num: number;
+  constructor(a: number) {
+    this.num = Math.floor(a);
+  }
+  // 省略
+  get value() {
+    return this.num;
+  }
+
+  set value(n: number) {
+    this.num = Math.floor(n);
+  }
+}
+
+function main() {
+  const a = new int(4.6);
+  a.value = 2.9;
+  console.log(a.value); // 2
+}
+
+main();
+```
+
+関数の前に `get` または `set` を宣言すると使えます。詳細はこちら <https://ay0.org/js-ts/types/#get,-set-(javascript%E3%81%AE%E8%A9%B1)>
+
+#### toPrimitive
 
 ここまでで int のクラスを作成しましたが、こんなことはできません。
 
