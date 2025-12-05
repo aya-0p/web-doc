@@ -668,7 +668,13 @@ console.log(a); // int { num: 17 }
 
 詳細はここにあります。 <https://ay0.org/js-ts/types/#%E3%82%AF%E3%83%A9%E3%82%B9(class)>
 
-課題：C++ の int (int32_t) の範囲で四則演算を行えるようにしてみましょう。
+それでは、C++ の unsigned short (uint16_t) の範囲で四則演算を行えるようにしてみましょう。
+
+<div style="color:rgb(from currentColor r g b / 0)">
+ヒント<br>
+unsigned short (uint16_t) では数値の範囲は 0 から 65535 です。<br>
+C++ で unsigned short a = -1; cout << a << endl; を行なうと 65535 と出力されるはずです。<br>
+</div>
 
 ### 3. 余談
 
@@ -745,7 +751,7 @@ const a = new int(4.6);
 console.log(Number(a) + 3); // NaN
 ```
 
-できます。
+`Symbol.toPrimitive` というものを使うとこれが実現できます。
 
 ```ts
   [Symbol.toPrimitive](hint: "number" | "string" | "default") {
