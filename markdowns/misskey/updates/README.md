@@ -9,6 +9,23 @@
 - バージョンは `yyyy.mm.patch-major.minor.patch` の形式で表記しています。この表記は今後変更される場合があります。
 - `#[number]`は[misskey-dev/misskey](https://github.com/misskey-dev/misskey)での issue 番号です。
 
+## 2025.12.0-1.3.0
+
+### Note
+
+- config の`trustProxy`のデフォルト値を`false`に変更しました。アップデート前に現在の config をご確認の上、必要に応じて値を変更してください。
+
+### Client
+
+- Fix: stacking router view で連続して戻る操作を行うと何も表示されなくなる問題を修正
+
+### Server
+
+- Enhance: メモリ使用量を削減しました
+- Enhance: ActivityPub アクティビティを送信する際のパフォーマンス向上
+- Enhance: 依存関係の更新
+- Fix: セキュリティに関する修正
+
 ## 2025.11.1-1.3.0
 
 ### Client
