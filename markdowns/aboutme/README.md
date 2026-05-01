@@ -1,5 +1,5 @@
 <!-- title 自己紹介 -->
-<!-- update 2025-08-04 12:00 -->
+<!-- update 2026-05-01 22:00 -->
 
 # 自己紹介
 
@@ -25,14 +25,15 @@
     - [misskey2x](#misskey2x)
     - [discord-song](#discord-song)
     - [tts](#tts)
+    - [いろいろ Server (開発中)](#いろいろ-server-開発中)
   - [各種 SNS など](#各種-sns-など)
     - [X(Twitter)](#xtwitter)
     - [Misskey](#misskey)
+    - [Bluesky](#bluesky)
     - [GitHub](#github)
-    - [YouTube](#youtube)
     - [ニコニコ動画](#ニコニコ動画)
     - [Discord](#discord)
-    - [Mirrativ](#mirrativ)
+    - [現在未使用](#現在未使用)
   - [Other Accounts](#other-accounts)
     - [EMail](#email)
   - [Links](#links)
@@ -55,6 +56,7 @@
 ### ぼ民として
 
 - 名前: [あや (@aya\_@voskey.icalo.net)](https://voskey.icalo.net/@aya_)
+- [追加情報はここ](#合成音声関係)
 
 ### 開発者として
 
@@ -82,12 +84,14 @@
 
 ### その他の旅行
 
-韓国 (2025)
+最新の旅行：韓国 (2026)
 
-<iframe src="https://voskey.icalo.net/embed/clips/a9bck9jf4v?maxHeight=700" data-misskey-embed-id="v1_859aa420-44d1-4166-9b18-0e2d15c5616f" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" style="border: none; width: 100%; max-width: 500px; height: 300px; color-scheme: light dark;"></iframe>
+<iframe src="https://voskey.icalo.net/embed/clips/alqhsxa0p6?maxHeight=700" data-misskey-embed-id="v1_alqhw2qwqz" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" style="border: none; width: 100%; max-width: 500px; height: 300px; color-scheme: light dark;"></iframe>
 
 他...
 
+- 韓国 (2026 年, ソウル)
+- [韓国 (2025 年, ソウル)](https://voskey.icalo.net/clips/a9bck9jf4v)
 - 東京・仙台 (2024 年, 東京都・宮城県仙台市)
 - 豊橋 (2024 年, 愛知県豊橋市)
 - 掛川 (2023 年, 静岡県掛川市など)
@@ -96,8 +100,7 @@
 ### 合成音声関係
 
 琴葉姉妹好きです
-
-<iframe src="https://voskey.icalo.net/embed/notes/9yig248fkn" data-misskey-embed-id="v1_71fd437a-21ab-4594-93fe-178ca94180e4" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" style="border: none; width: 100%; max-width: 500px; height: 300px; color-scheme: light dark;"></iframe>
+<iframe src="https://voskey.icalo.net/embed/notes/al7rblunlf" data-misskey-embed-id="v1_alqhzfdqtc" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" style="border: none; width: 100%; max-width: 500px; height: 300px; color-scheme: light dark;"></iframe>
 <iframe src="https://voskey.icalo.net/embed/notes/9nk8geddzu" data-misskey-embed-id="v1_eeb85f5d-7302-42c1-8e07-1dca5b81b4c1" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" style="border: none; width: 100%; max-width: 500px; height: 300px; color-scheme: light dark;"></iframe>
 
 ### 料理
@@ -148,6 +151,18 @@ VOICEVOX のキャラクターに [voicevox_core](https://github.com/voicevox/vo
 
 <https://github.com/aya-0p/tts>
 
+### いろいろ Server (開発中)
+
+以下の機能をまとめたサーバ
+
+- Web Server
+- Discord Bot
+- Misskey Copy (Misskeyに投稿した内容を別のMisskeyやXに転送する)
+- 部屋の温度監視
+- メールアドレス作成
+
+言語：Rust
+
 ## 各種 SNS など
 
 - 複数あるものは先頭がメイン
@@ -160,20 +175,21 @@ VOICEVOX のキャラクターに [voicevox_core](https://github.com/voicevox/vo
 ### Misskey
 
 - ぼすきー
-  - [あや(@aya\_@voskey.icalo.net)](https://voskey.icalo.net/@aya_)
+  - [あや/文山 彩(@aya\_@voskey.icalo.net)](https://voskey.icalo.net/@aya_)
 - Misskey.io
   - [あや～(@aya\_@misskey.io)](https://misskey.io/@aya_)
-  - [あや(@aya_0p@misskey.io)](https://misskey.io/@aya_0p)
 - aya's misskey
   - [aya(@aya@mi.ay0.org)](https://mi.ay0.org/@aya)
+
+### Bluesky
+
+- aya-voskey
+  - [あや/文山 彩(@aya-voskey.mi.ay0.org.ap.brid.gy)](https://bsky.app/profile/aya-voskey.mi.ay0.org.ap.brid.gy)
+  - ぼすきーの内容をaya's misskeyにコピーした内容のブリッジです
 
 ### GitHub
 
 - [Aya(aya-0p)](https://github.com/aya-0p)
-
-### YouTube
-
-- [あや](https://www.youtube.com/channel/UC5musEOBJXLA36RD7qV1xEA)
 
 ### ニコニコ動画
 
@@ -184,9 +200,14 @@ VOICEVOX のキャラクターに [voicevox_core](https://github.com/voicevox/vo
 - aya(aya_0p)
 - あゆ(ayu_1)
 
-### Mirrativ
+### 現在未使用
 
-- [あや](https://mirrativ.com/user/104197174)
+- Misskey.io
+  - [あや(@aya_0p@misskey.io)](https://misskey.io/@aya_0p)
+- Mirrativ
+  - [あや](https://mirrativ.com/user/104197174)
+- YouTube
+  - [あや](https://www.youtube.com/channel/UC5musEOBJXLA36RD7qV1xEA)
 
 ## Other Accounts
 
