@@ -31,6 +31,7 @@
     - [Misskey](#misskey)
     - [Bluesky](#bluesky)
     - [GitHub](#github)
+    - [AtCoder](#atcoder)
     - [ニコニコ動画](#ニコニコ動画)
     - [Discord](#discord)
     - [現在未使用](#現在未使用)
@@ -191,6 +192,10 @@ VOICEVOX のキャラクターに [voicevox_core](https://github.com/voicevox/vo
 ### GitHub
 
 - [Aya(aya-0p)](https://github.com/aya-0p)
+
+### AtCoder
+
+- [aya0p](https://atcoder.jp/users/aya0p)
 
 ### ニコニコ動画
 
