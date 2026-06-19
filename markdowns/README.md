@@ -1,7 +1,3 @@
-<!-- title Home -->
-<!-- update 2025-08-04 12:00 -->
-<!-- license ライセンスページを確認してください -->
-
 # Welcome to aya's website
 
 ## 重要な情報

@@ -1,8 +1,3 @@
-<!-- title 文山 彩 -->
-<!-- license Copyright (c) 2024-2025 aya-0p, 利用規約欄をご確認ください -->
-<!-- create 2024-03-11 16:00 -->
-<!-- update 2025-02-02 22:00 -->
-
 # 文山 彩
 
 <img src="https://f.ay0.org/share/avatar_1000.png" height="180">
