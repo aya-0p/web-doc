@@ -26,7 +26,6 @@
   - [各種 SNS など](#各種-sns-など)
     - [X(Twitter)](#xtwitter)
     - [Misskey](#misskey)
-    - [Bluesky](#bluesky)
     - [GitHub](#github)
     - [AtCoder](#atcoder)
     - [ニコニコ動画](#ニコニコ動画)
@@ -120,19 +119,19 @@
 
 内容は<https://github.com/aya-0p/web-doc>で公開
 
-言語：JavaScript, TypeScript (Node.js)
+言語：Rust
 
 ### DiscordBot
 
 Discord で送信したものを読み上げる
 
-言語：JavaScript, TypeScript, C++ (Node.js)
+言語：Rust
 
 ### misskey2x
 
 Misskey で送信したメッセージを X(Twitter)に転送する
 
-言語：TypeScript (Node.js)
+言語：Rust
 
 ### discord-song
 
@@ -156,7 +155,7 @@ VOICEVOX のキャラクターに [voicevox_core](https://github.com/voicevox/vo
 
 - Web Server
 - Discord Bot
-- Misskey Copy (Misskeyに投稿した内容を別のMisskeyやXに転送する)
+- Misskey Copy (Misskey に投稿した内容を別の Misskey や X に転送する)
 - 部屋の温度監視
 - メールアドレス作成
 
@@ -177,14 +176,6 @@ VOICEVOX のキャラクターに [voicevox_core](https://github.com/voicevox/vo
   - [あや/文山 彩(@aya\_@voskey.icalo.net)](https://voskey.icalo.net/@aya_)
 - Misskey.io
   - [あや～(@aya\_@misskey.io)](https://misskey.io/@aya_)
-- aya's misskey
-  - [aya(@aya@mi.ay0.org)](https://mi.ay0.org/@aya)
-
-### Bluesky
-
-- aya-voskey
-  - [あや/文山 彩(@aya-voskey.mi.ay0.org.ap.brid.gy)](https://bsky.app/profile/aya-voskey.mi.ay0.org.ap.brid.gy)
-  - ぼすきーの内容をaya's misskeyにコピーした内容のブリッジです
 
 ### GitHub
 
@@ -217,7 +208,6 @@ VOICEVOX のキャラクターに [voicevox_core](https://github.com/voicevox/vo
 ### EMail
 
 - <main@ay0.org>
-- <misskey@ay0.org> Misskey 関連はこちらへ
 
 ## Links
 
