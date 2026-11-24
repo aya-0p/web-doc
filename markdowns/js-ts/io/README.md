@@ -1,3 +1,10 @@
++++
+title = "入出力"
+create = ""
+update = ""
+license = ""
++++
+
 # 入出力
 
 ここではサーバーサイド(Node.js)のみを扱っています

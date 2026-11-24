@@ -1,3 +1,10 @@
++++
+title = "JavaScript / TypeScript"
+create = ""
+update = ""
+license = ""
++++
+
 # JavaScript / TypeScript
 
 ## JavaScript

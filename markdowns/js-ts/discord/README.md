@@ -1,3 +1,10 @@
++++
+title = "Typescript 講座 (Discord.js)"
+create = ""
+update = ""
+license = ""
++++
+
 # Typescript 講座 (Discord.js)
 
 - [Typescript 講座 (Discord.js)](#typescript-講座-discordjs)

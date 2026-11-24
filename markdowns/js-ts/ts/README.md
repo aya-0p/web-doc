@@ -1,3 +1,10 @@
++++
+title = "TypeScriptとは"
+create = ""
+update = ""
+license = ""
++++
+
 # TypeScriptとは
 
 - JavaScript に型情報を追加したものです。

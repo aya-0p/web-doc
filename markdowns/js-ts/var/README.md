@@ -1,3 +1,10 @@
++++
+title = "変数"
+create = ""
+update = ""
+license = ""
++++
+
 # 変数
 
 JavaScript の変数宣言方法は以下の通り複数あります

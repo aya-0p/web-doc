@@ -1,3 +1,10 @@
++++
+title = "Scratchでプログラミング体験 2日目"
+create = ""
+update = ""
+license = ""
++++
+
 # Scratchでプログラミング体験 2日目
 
 ## Scratch

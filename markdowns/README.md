@@ -1,3 +1,10 @@
++++
+title = "Home"
+create = ""
+update = "2026-11-21T09:00:00+09:00"
+license = "ライセンスページを確認してください"
++++
+
 # Welcome to aya's website
 
 ## Links

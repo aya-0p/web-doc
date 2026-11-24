@@ -1,3 +1,10 @@
++++
+title = "型の話"
+create = ""
+update = ""
+license = ""
++++
+
 # 型の話
 
 ## 基本の型

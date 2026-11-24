@@ -1,3 +1,10 @@
++++
+title = "文山 彩"
+create = "2024-03-11T16:00:00+09:00"
+update = "2025-02-02T22:00:00+09:00"
+license = "Copyright (c) 2024-2026 aya-0p, 利用規約欄をご確認ください"
++++
+
 # 文山 彩
 
 <img src="https://f.ay0.org/share/avatar_1000.png" height="180">

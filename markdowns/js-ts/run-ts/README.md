@@ -1,3 +1,10 @@
++++
+title = "トランスパイルと実行"
+create = ""
+update = ""
+license = ""
++++
+
 # トランスパイルと実行
 
 パッケージ`typescript`を使います

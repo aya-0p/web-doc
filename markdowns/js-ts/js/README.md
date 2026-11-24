@@ -1,3 +1,10 @@
++++
+title = "JavaScriptとは"
+create = ""
+update = ""
+license = ""
++++
+
 # JavaScriptとは
 
 - プログラミング言語の 1 つ

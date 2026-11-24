@@ -1,3 +1,10 @@
++++
+title = "その他"
+create = ""
+update = ""
+license = ""
++++
+
 # その他
 
 ## アロー関数

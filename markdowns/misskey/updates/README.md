@@ -1,3 +1,10 @@
++++
+title = "更新情報"
+create = "2024-05-20T16:45:00+09:00"
+update = "2025-04-09T19:00:00+09:00"
+license = "misskeyの更新情報: GNU Affero General Public License v3.0, その他: なし"
++++
+
 <!-- textlint-disable spellcheck-tech-word -->
 
 # 更新情報

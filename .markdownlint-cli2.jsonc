@@ -4,7 +4,8 @@
     "no-duplicate-heading": false,
     "line-length": false,
     "commands-show-output": false,
-    "no-inline-html": false
+    "no-inline-html": false,
+    "single-h1": false
   },
   "gitignore": true
 }

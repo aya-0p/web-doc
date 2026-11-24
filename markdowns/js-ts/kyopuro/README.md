@@ -1,3 +1,10 @@
++++
+title = "JavaScriptで競技プログラミング"
+create = ""
+update = ""
+license = ""
++++
+
 # JavaScriptで競技プログラミング
 
 - **やめておいたほうがいい**
